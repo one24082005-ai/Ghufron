@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Nama Anda</title>
+  <meta name="description" content="Portofolio singkat — project, skill, kontak." />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Simple custom styles */
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased leading-relaxed">
+  <header class="fixed w-full z-30">
+    <nav class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="font-semibold text-xl">Home <span class="text-indigo-400">.</span></a>
+      <div class="hidden md:flex gap-6 items-center">
+        <a href="#about" class="hover:text-indigo-300">About</a>
+        <a href="#projects" class="hover:text-indigo-300">Projects</a>
+        <a href="#skills" class="hover:text-indigo-300">Skills</a>
+        <a href="#contact" class="hover:text-indigo-300">Contact</a>
+    
+      </div>
+      <button id="menuBtn" class="md:hidden px-3 py-2 bg-slate-800 rounded-md">Menu</button>
+    </nav>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden bg-slate-900/80 glass backdrop-blur-md md:hidden">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28">
+    <!-- Hero -->
+    <section id="home" class="max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Halo, saya <span class="text-indigo-400">Nila Mamluatul Hikmah</span></h1>
+        <p class="mt-4 text-slate-300 max-w-xl">Saya Seorang Mahasiswa Jurusan Kebidanan Fakultas Ilmu Keperawatan dan Kesehatan di Universitas Muhammadiyah Semarang.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" class="px-4 py-2 rounded-md bg-indigo-500 hover:bg-indigo-600">Klik untuk Lanjut </a>
+    
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-3 max-w-sm">
+          <div class="p-3 bg-slate-800 rounded" align="center">Sempro</div>
+          <div class="p-3 bg-slate-800 rounded" align="center">Skripsi</div>
+          <div class="p-3 bg-slate-800 rounded" align="center">Wisuda</div>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <div class="w-64 h-64 rounded-2xl bg-gradient-to-br from-indigo-600/40 to-slate-800 flex items-center justify-center">
+          <img src="Gambar WhatsApp 2025-09-09 pukul 21.53.12_29549047.jpg" alt="avatar" class="w-56 h-56 object-cover rounded-xl shadow-xl"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-5xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">About</h2>
+      <div class="mt-4 md:flex gap-8">
+        <div class="md:w-2/3 text-slate-300">se free itu kah hidupmu, hingga hidup orang lain kamu Kepoin 😏</div>
+        <div class="md:w-1/3 mt-4 md:mt-0">
+          <ul class="space-y-2 text-slate-300">
+            <li><strong>Education:</strong> Kebidanan</li>
+            <li><strong>Hobby:</strong> Tidurr, Tidurr dan Tidurr 😅</li>
+            <li><strong>Instagram:</strong> @mamluah_alhikmah</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">Lanjut Ndak Ini</h2>
+      <p class="mt-2 text-slate-300">Ehh laaa Inget ga Hari ini Tanggal Berapaa ?</p>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article
+            class="bg-slate-800 rounded-lg p-6 hover:scale-[1.02] transition"
+
+  <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-6">
+    <button class="bg-blue-500 hover:bg-red-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition btn-yes" data-tgl="17">17</button>
+    <button class="bg-blue-500 hover:bg-red-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition btn-yes" data-tgl="21">21</button>
+    <button class="bg-blue-500 hover:bg-red-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition btn-yes" data-tgl="24">24</button>
+    <button class="bg-blue-500 hover:bg-red-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition btn-yes" data-tgl="30">30</button>
+  </div>
+
+  <p id="pesan" class="mt-6 text-lg text-yellow-300 font-medium"></p>
+
+  <script>
+    // Ambil semua tombol dan elemen pesan
+    const buttons = document.querySelectorAll(".btn-yes");
+    const pesan = document.getElementById("pesan");
+
+    // Tambahkan event listener ke setiap tombol
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const tgl = btn.dataset.tgl;
+
+        if (tgl === "17") {
+          pesan.textContent = "Ihh parahh masa lupa 😤";
+        } 
+        else if (tgl === "24") {
+          pesan.textContent = "Hayoo tanggal 24 mah punyane Ghufron 😏";
+        } 
+        else if (tgl === "30") {
+          pesan.textContent = "Udaa ah ndak jadi, masa tanggal sendiri lupa 😅";
+        } 
+        else if (tgl === "21") {
+          pesan.textContent = "Udaa ah ndak jadi, masa tanggal sendiri lupa 😅";
+        }
+      });
+    });
+  </script>
+        </article>
+        
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="max-w-5xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">Skills</h2>
+      <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-slate-300">
+        <div class="p-3 bg-slate-800 rounded">HTML</div>
+        <div class="p-3 bg-slate-800 rounded">CSS / Tailwind</div>
+        <div class="p-3 bg-slate-800 rounded">JavaScript</div>
+        <div class="p-3 bg-slate-800 rounded">Python (data)</div>
+      </div>
+    </section>
+
+
+  <footer class="mt-12 border-t border-slate-800 py-6">
+    <div class="max-w-5xl mx-auto px-6 text-slate-400 text-sm">© 2025 Panggilghuff</div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Simple contact form handling
+    const contactForm = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(contactForm);
+      // Simulate succes
+      formMsg.classList.remove('hidden');
+      formMsg.classList.add('bg-green-800','text-green-100');
+      formMsg.textContent = `Terima kasih, ${data.get('name')}! Pesan Anda telah diterima.`;
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
